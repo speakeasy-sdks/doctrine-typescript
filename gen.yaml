@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: dfe0da54cbc7e1669cb10d2a74cf83c2
   docVersion: 1.0.0
-  speakeasyVersion: 1.53.0
-  generationVersion: 2.58.0
+  speakeasyVersion: 1.53.1
+  generationVersion: 2.58.2
 generation:
   comments:
     disableComments: false
@@ -13,7 +13,7 @@ generation:
   singleTagPerOp: false
   tagNamespacingDisabled: false
 typescript:
-  version: 1.2.0
+  version: 1.2.1
   author: Doctrine
   maxMethodParams: 0
   packageName: Doctrine
