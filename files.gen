@@ -35,6 +35,7 @@ src/sdk/models/operations/askquestionsetnumberofcontextdocs.ts
 src/sdk/models/operations/httplocalhost3000apiscanpagecontent.ts
 src/sdk/models/operations/httplocalhost3000apiscansitemap.ts
 src/sdk/models/operations/index.ts
+src/sdk/models/errors/index.ts
 docs/sdks/doctrine/README.md
 docs/sdks/chat/README.md
 docs/sdks/document/README.md
