@@ -35,6 +35,10 @@ export type SDKProps = {
      * Allows overriding the default server URL used by the SDK
      */
     serverURL?: string;
+    /**
+     * Allows overriding the default retry config used by the SDK
+     */
+    retryConfig?: utils.RetryConfig;
 };
 
 export class SDKConfiguration {
@@ -43,9 +47,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "1.18.0";
-    genVersion = "2.96.3";
-
+    sdkVersion = "1.18.1";
+    genVersion = "2.107.3";
+    retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
     }
@@ -72,6 +76,7 @@ export class Doctrine {
         this.sdkConfiguration = new SDKConfiguration({
             defaultClient: defaultClient,
             serverURL: serverURL,
+            retryConfig: props?.retryConfig,
         });
 
         this.chat = new Chat(this.sdkConfiguration);
