@@ -44,27 +44,27 @@ sdk.httpLocalhost3000ApiScanpagecontent({
 * [httpLocalhost3000ApiScanpagecontent](docs/sdks/doctrine/README.md#httplocalhost3000apiscanpagecontent) - http://localhost:3000/api/scanPageContent
 * [httpLocalhost3000ApiScansitemap](docs/sdks/doctrine/README.md#httplocalhost3000apiscansitemap) - http://localhost:3000/api/scanSitemap
 
-### [chat](docs/sdks/chat/README.md)
+### [Chat](docs/sdks/chat/README.md)
 
 * [createPublicChat](docs/sdks/chat/README.md#createpublicchat) - Create Public Chat
 * [deleteChat](docs/sdks/chat/README.md#deletechat) - Delete Chat
 * [sendMessageToPublicChat](docs/sdks/chat/README.md#sendmessagetopublicchat) - Send message to Public Chat
 
-### [document](docs/sdks/document/README.md)
+### [Document](docs/sdks/document/README.md)
 
 * [deleteDocument](docs/sdks/document/README.md#deletedocument) - Delete Document
 * [listDocuments](docs/sdks/document/README.md#listdocuments) - List Documents
 
-### [ingest](docs/sdks/ingest/README.md)
+### [Ingest](docs/sdks/ingest/README.md)
 
 * [ingestTextWithMetadata](docs/sdks/ingest/README.md#ingesttextwithmetadata) - Ingest Text with Metadata
 
-### [partition](docs/sdks/partition/README.md)
+### [Partition](docs/sdks/partition/README.md)
 
 * [createPartition](docs/sdks/partition/README.md#createpartition) - Create Partition
 * [searchPartitions](docs/sdks/partition/README.md#searchpartitions) - Search Partitions
 
-### [query](docs/sdks/query/README.md)
+### [Query](docs/sdks/query/README.md)
 
 * [askQuestionSetNumberOfContextDocs](docs/sdks/query/README.md#askquestionsetnumberofcontextdocs) - Ask Question set number of context docs
 <!-- End SDK Available Operations -->

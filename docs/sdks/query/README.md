@@ -1,4 +1,4 @@
-# query
+# Query
 
 ### Available Operations
 

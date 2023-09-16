@@ -1,4 +1,4 @@
-# ingest
+# Ingest
 
 ### Available Operations
 

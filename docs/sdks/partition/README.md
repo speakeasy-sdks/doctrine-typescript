@@ -1,4 +1,4 @@
-# partition
+# Partition
 
 ### Available Operations
 
