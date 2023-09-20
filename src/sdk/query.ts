@@ -34,7 +34,7 @@ export class Query {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/api/query";
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "request", "json");

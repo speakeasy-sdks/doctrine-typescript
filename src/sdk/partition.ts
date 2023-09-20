@@ -34,7 +34,7 @@ export class Partition {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/api/partition";
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "request", "json");

@@ -34,7 +34,7 @@ export class Chat {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/api/chat";
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "request", "json");
@@ -149,7 +149,7 @@ export class Chat {
         const url: string =
             baseURL.replace(/\/$/, "") + "/api/chat/cli3ymj8i0002337jh3dpysb2/public";
 
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
         try {
             [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req, "request", "json");
