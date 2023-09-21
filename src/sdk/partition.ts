@@ -5,7 +5,7 @@
 import * as utils from "../internal/utils";
 import * as operations from "./models/operations";
 import { SDKConfiguration } from "./sdk";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 export class Partition {
     private sdkConfiguration: SDKConfiguration;
@@ -44,7 +44,7 @@ export class Partition {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers = { ...reqBodyHeaders, ...config?.headers };
+        const headers: RawAxiosRequestHeaders = { ...reqBodyHeaders, ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -100,7 +100,7 @@ export class Partition {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/api/partition/search";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers = { ...config?.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers };
         const queryParams: string = utils.serializeQueryParams(req);
         headers["Accept"] = "*/*";
 

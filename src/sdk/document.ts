@@ -5,7 +5,7 @@
 import * as utils from "../internal/utils";
 import * as operations from "./models/operations";
 import { SDKConfiguration } from "./sdk";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 export class Document {
     private sdkConfiguration: SDKConfiguration;
@@ -27,7 +27,7 @@ export class Document {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/api/document/cli3wy8jp000n33d1bsxvebns";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers = { ...config?.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -75,7 +75,7 @@ export class Document {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/api/document";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers = { ...config?.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[

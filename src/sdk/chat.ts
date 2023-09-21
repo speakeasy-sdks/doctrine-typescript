@@ -5,7 +5,7 @@
 import * as utils from "../internal/utils";
 import * as operations from "./models/operations";
 import { SDKConfiguration } from "./sdk";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 export class Chat {
     private sdkConfiguration: SDKConfiguration;
@@ -44,7 +44,7 @@ export class Chat {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers = { ...reqBodyHeaders, ...config?.headers };
+        const headers: RawAxiosRequestHeaders = { ...reqBodyHeaders, ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -93,7 +93,7 @@ export class Chat {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/api/chat/cli3yjw8j0000337jq4zbn1tq";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers = { ...config?.headers };
+        const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -159,7 +159,7 @@ export class Chat {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers = { ...reqBodyHeaders, ...config?.headers };
+        const headers: RawAxiosRequestHeaders = { ...reqBodyHeaders, ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[

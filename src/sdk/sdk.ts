@@ -10,7 +10,7 @@ import * as operations from "./models/operations";
 import { Partition } from "./partition";
 import { Query } from "./query";
 import axios from "axios";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 /**
  * Contains the list of servers available to the SDK
@@ -47,8 +47,8 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "1.18.3";
-    genVersion = "2.118.1";
+    sdkVersion = "1.18.4";
+    genVersion = "2.122.1";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -116,7 +116,7 @@ export class Doctrine {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers = { ...reqBodyHeaders, ...config?.headers };
+        const headers: RawAxiosRequestHeaders = { ...reqBodyHeaders, ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[
@@ -183,7 +183,7 @@ export class Doctrine {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers = { ...reqBodyHeaders, ...config?.headers };
+        const headers: RawAxiosRequestHeaders = { ...reqBodyHeaders, ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[

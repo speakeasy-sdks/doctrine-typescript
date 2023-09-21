@@ -5,7 +5,7 @@
 import * as utils from "../internal/utils";
 import * as operations from "./models/operations";
 import { SDKConfiguration } from "./sdk";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 export class Ingest {
     private sdkConfiguration: SDKConfiguration;
@@ -44,7 +44,7 @@ export class Ingest {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        const headers = { ...reqBodyHeaders, ...config?.headers };
+        const headers: RawAxiosRequestHeaders = { ...reqBodyHeaders, ...config?.headers };
         headers["Accept"] = "*/*";
 
         headers[

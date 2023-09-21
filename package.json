@@ -1,6 +1,6 @@
 {
   "name": "Doctrine",
-  "version": "1.18.3",
+  "version": "1.18.4",
   "author": "Doctrine",
   "scripts": {
     "prepare": "tsc --build"
