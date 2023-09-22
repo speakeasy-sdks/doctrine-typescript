@@ -36,12 +36,6 @@ src/sdk/models/operations/httplocalhost3000apiscanpagecontent.ts
 src/sdk/models/operations/httplocalhost3000apiscansitemap.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/errors/index.ts
-docs/sdks/doctrine/README.md
-docs/sdks/chat/README.md
-docs/sdks/document/README.md
-docs/sdks/ingest/README.md
-docs/sdks/partition/README.md
-docs/sdks/query/README.md
 USAGE.md
 docs/models/operations/createpublicchatrequestbody.md
 docs/models/operations/createpublicchatresponse.md
@@ -63,4 +57,10 @@ docs/models/operations/httplocalhost3000apiscanpagecontentrequestbody.md
 docs/models/operations/httplocalhost3000apiscanpagecontentresponse.md
 docs/models/operations/httplocalhost3000apiscansitemaprequestbody.md
 docs/models/operations/httplocalhost3000apiscansitemapresponse.md
+docs/sdks/doctrine/README.md
+docs/sdks/chat/README.md
+docs/sdks/document/README.md
+docs/sdks/ingest/README.md
+docs/sdks/partition/README.md
+docs/sdks/query/README.md
 .gitattributes
