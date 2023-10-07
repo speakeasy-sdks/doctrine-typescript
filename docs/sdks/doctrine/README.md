@@ -16,17 +16,18 @@ http://localhost:3000/api/scanPageContent
 
 ```typescript
 import { Doctrine } from "Doctrine";
-import { HttpLocalhost3000ApiScanpagecontentResponse } from "Doctrine/dist/sdk/models/operations";
 
-const sdk = new Doctrine();
+(async() => {
+  const sdk = new Doctrine();
 
-sdk.doctrine.httpLocalhost3000ApiScanpagecontent({
-  url: "https://sardelkitchen.com/products/chili-infused-olive-oil",
-}).then((res: HttpLocalhost3000ApiScanpagecontentResponse) => {
+  const res = await sdk.doctrine.httpLocalhost3000ApiScanpagecontent({
+    url: "https://sardelkitchen.com/products/chili-infused-olive-oil",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -50,17 +51,18 @@ http://localhost:3000/api/scanSitemap
 
 ```typescript
 import { Doctrine } from "Doctrine";
-import { HttpLocalhost3000ApiScansitemapResponse } from "Doctrine/dist/sdk/models/operations";
 
-const sdk = new Doctrine();
+(async() => {
+  const sdk = new Doctrine();
 
-sdk.doctrine.httpLocalhost3000ApiScansitemap({
-  rootDomain: "sardelkitchen.com",
-}).then((res: HttpLocalhost3000ApiScansitemapResponse) => {
+  const res = await sdk.doctrine.httpLocalhost3000ApiScansitemap({
+    rootDomain: "sardelkitchen.com",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

@@ -13,18 +13,19 @@ Ask Question set number of context docs
 
 ```typescript
 import { Doctrine } from "Doctrine";
-import { AskQuestionSetNumberOfContextDocsResponse } from "Doctrine/dist/sdk/models/operations";
 
-const sdk = new Doctrine();
+(async() => {
+  const sdk = new Doctrine();
 
-sdk.query.askQuestionSetNumberOfContextDocs({
-  numberOfDocumentsInContext: 3,
-  query: "How long should I let coffee grounds bloom?",
-}).then((res: AskQuestionSetNumberOfContextDocsResponse) => {
+  const res = await sdk.query.askQuestionSetNumberOfContextDocs({
+    numberOfDocumentsInContext: 3,
+    query: "How long should I let coffee grounds bloom?",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

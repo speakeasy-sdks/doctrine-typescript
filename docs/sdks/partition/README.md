@@ -14,17 +14,18 @@ Create Partition
 
 ```typescript
 import { Doctrine } from "Doctrine";
-import { CreatePartitionResponse } from "Doctrine/dist/sdk/models/operations";
 
-const sdk = new Doctrine();
+(async() => {
+  const sdk = new Doctrine();
 
-sdk.partition.createPartition({
-  name: "Sample part",
-}).then((res: CreatePartitionResponse) => {
+  const res = await sdk.partition.createPartition({
+    name: "Sample part",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -48,17 +49,18 @@ Search Partitions
 
 ```typescript
 import { Doctrine } from "Doctrine";
-import { SearchPartitionsResponse } from "Doctrine/dist/sdk/models/operations";
 
-const sdk = new Doctrine();
+(async() => {
+  const sdk = new Doctrine();
 
-sdk.partition.searchPartitions({
-  searchValue: "metadata",
-}).then((res: SearchPartitionsResponse) => {
+  const res = await sdk.partition.searchPartitions({
+    searchValue: "metadata",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

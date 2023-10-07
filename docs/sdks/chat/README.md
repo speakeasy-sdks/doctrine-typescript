@@ -15,19 +15,20 @@ Create Public Chat
 
 ```typescript
 import { Doctrine } from "Doctrine";
-import { CreatePublicChatResponse } from "Doctrine/dist/sdk/models/operations";
 
-const sdk = new Doctrine();
+(async() => {
+  const sdk = new Doctrine();
 
-sdk.chat.createPublicChat({
-  name: "Public Chat",
-  partitionId: "cli3wrtkt000c33d1yzc9acqj",
-  public: true,
-}).then((res: CreatePublicChatResponse) => {
+  const res = await sdk.chat.createPublicChat({
+    name: "Public Chat",
+    partitionId: "cli3wrtkt000c33d1yzc9acqj",
+    public: true,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -51,15 +52,16 @@ Delete Chat
 
 ```typescript
 import { Doctrine } from "Doctrine";
-import { DeleteChatResponse } from "Doctrine/dist/sdk/models/operations";
 
-const sdk = new Doctrine();
+(async() => {
+  const sdk = new Doctrine();
 
-sdk.chat.deleteChat().then((res: DeleteChatResponse) => {
+  const res = await sdk.chat.deleteChat();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -82,18 +84,19 @@ Send message to Public Chat
 
 ```typescript
 import { Doctrine } from "Doctrine";
-import { SendMessageToPublicChatResponse } from "Doctrine/dist/sdk/models/operations";
 
-const sdk = new Doctrine();
+(async() => {
+  const sdk = new Doctrine();
 
-sdk.chat.sendMessageToPublicChat({
-  message: "How hot should water be?",
-  userId: "cookiecookie",
-}).then((res: SendMessageToPublicChatResponse) => {
+  const res = await sdk.chat.sendMessageToPublicChat({
+    message: "How hot should water be?",
+    userId: "cookiecookie",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

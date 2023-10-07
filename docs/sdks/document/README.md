@@ -14,15 +14,16 @@ Delete Document
 
 ```typescript
 import { Doctrine } from "Doctrine";
-import { DeleteDocumentResponse } from "Doctrine/dist/sdk/models/operations";
 
-const sdk = new Doctrine();
+(async() => {
+  const sdk = new Doctrine();
 
-sdk.document.deleteDocument().then((res: DeleteDocumentResponse) => {
+  const res = await sdk.document.deleteDocument();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -45,15 +46,16 @@ List Documents
 
 ```typescript
 import { Doctrine } from "Doctrine";
-import { ListDocumentsResponse } from "Doctrine/dist/sdk/models/operations";
 
-const sdk = new Doctrine();
+(async() => {
+  const sdk = new Doctrine();
 
-sdk.document.listDocuments().then((res: ListDocumentsResponse) => {
+  const res = await sdk.document.listDocuments();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
