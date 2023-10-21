@@ -21,17 +21,18 @@ yarn add https://github.com/speakeasy-sdks/doctrine-typescript
 ```typescript
 import { Doctrine } from "Doctrine";
 
-(async() => {
-  const sdk = new Doctrine();
+(async () => {
+    const sdk = new Doctrine();
 
-  const res = await sdk.httpLocalhost3000ApiScanpagecontent({
-    url: "https://sardelkitchen.com/products/chili-infused-olive-oil",
-  });
+    const res = await sdk.doctrine.httpLocalhost3000ApiScanpagecontent({
+        url: "https://sardelkitchen.com/products/chili-infused-olive-oil",
+    });
 
-  if (res.statusCode == 200) {
-    // handle response
-  }
+    if (res.statusCode == 200) {
+        // handle response
+    }
 })();
+
 ```
 <!-- End SDK Example Usage -->
 
