@@ -3,10 +3,10 @@
  */
 
 import * as utils from "../internal/utils";
+import * as operations from "../sdk/models/operations";
 import { Chat } from "./chat";
 import { Document } from "./document";
 import { Ingest } from "./ingest";
-import * as operations from "./models/operations";
 import { Partition } from "./partition";
 import { Query } from "./query";
 import axios from "axios";
@@ -47,9 +47,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "1.23.0";
-    genVersion = "2.171.0";
-    userAgent = "speakeasy-sdk/typescript 1.23.0 2.171.0 1.0.0 Doctrine";
+    sdkVersion = "2.0.0";
+    genVersion = "2.181.1";
+    userAgent = "speakeasy-sdk/typescript 2.0.0 2.181.1 1.0.0 Doctrine";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);

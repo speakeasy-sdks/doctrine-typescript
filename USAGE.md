@@ -7,7 +7,7 @@ import { Doctrine } from "Doctrine";
 (async () => {
     const sdk = new Doctrine();
 
-    const res = await sdk.doctrine.httpLocalhost3000ApiScanpagecontent({
+    const res = await sdk.httpLocalhost3000ApiScanpagecontent({
         url: "https://sardelkitchen.com/products/chili-infused-olive-oil",
     });
 

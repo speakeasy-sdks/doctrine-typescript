@@ -1,5 +1,5 @@
 # Document
-(*document*)
+(*.document*)
 
 ### Available Operations
 
@@ -19,6 +19,7 @@ import { Doctrine } from "Doctrine";
   const sdk = new Doctrine();
 
   const res = await sdk.document.deleteDocument();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -51,6 +52,7 @@ import { Doctrine } from "Doctrine";
   const sdk = new Doctrine();
 
   const res = await sdk.document.listDocuments();
+
 
   if (res.statusCode == 200) {
     // handle response

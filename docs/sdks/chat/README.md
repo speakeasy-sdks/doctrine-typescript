@@ -1,5 +1,5 @@
 # Chat
-(*chat*)
+(*.chat*)
 
 ### Available Operations
 
@@ -24,6 +24,7 @@ import { Doctrine } from "Doctrine";
     partitionId: "cli3wrtkt000c33d1yzc9acqj",
     public: true,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -57,6 +58,7 @@ import { Doctrine } from "Doctrine";
   const sdk = new Doctrine();
 
   const res = await sdk.chat.deleteChat();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -92,6 +94,7 @@ import { Doctrine } from "Doctrine";
     message: "How hot should water be?",
     userId: "cookiecookie",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

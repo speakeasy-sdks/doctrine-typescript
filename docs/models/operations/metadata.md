@@ -1,4 +1,4 @@
-# IngestTextWithMetadataRequestBodyMetadata
+# Metadata
 
 
 ## Fields

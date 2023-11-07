@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AxiosResponse } from "axios";
 import { Expose, Type } from "class-transformer";
 
-export class IngestTextWithMetadataRequestBodyMetadata extends SpeakeasyBase {
+export class Metadata extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "externalId" })
     externalId?: string;
@@ -19,8 +19,8 @@ export class IngestTextWithMetadataRequestBodyMetadata extends SpeakeasyBase {
 export class IngestTextWithMetadataRequestBody extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "metadata" })
-    @Type(() => IngestTextWithMetadataRequestBodyMetadata)
-    metadata?: IngestTextWithMetadataRequestBodyMetadata;
+    @Type(() => Metadata)
+    metadata?: Metadata;
 
     @SpeakeasyMetadata()
     @Expose({ name: "name" })

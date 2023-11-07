@@ -3,7 +3,7 @@
  */
 
 import * as utils from "../internal/utils";
-import * as operations from "./models/operations";
+import * as operations from "../sdk/models/operations";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 

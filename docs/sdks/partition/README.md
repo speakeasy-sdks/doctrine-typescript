@@ -1,5 +1,5 @@
 # Partition
-(*partition*)
+(*.partition*)
 
 ### Available Operations
 
@@ -21,6 +21,7 @@ import { Doctrine } from "Doctrine";
   const res = await sdk.partition.createPartition({
     name: "Sample part",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -56,6 +57,7 @@ import { Doctrine } from "Doctrine";
   const res = await sdk.partition.searchPartitions({
     searchValue: "metadata",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

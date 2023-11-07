@@ -1,5 +1,5 @@
 # Query
-(*query*)
+(*.query*)
 
 ### Available Operations
 
@@ -21,6 +21,7 @@ import { Doctrine } from "Doctrine";
     numberOfDocumentsInContext: 3,
     query: "How long should I let coffee grounds bloom?",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
