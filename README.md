@@ -44,27 +44,27 @@ import { Doctrine } from "Doctrine";
 * [httpLocalhost3000ApiScanpagecontent](docs/sdks/doctrine/README.md#httplocalhost3000apiscanpagecontent) - http://localhost:3000/api/scanPageContent
 * [httpLocalhost3000ApiScansitemap](docs/sdks/doctrine/README.md#httplocalhost3000apiscansitemap) - http://localhost:3000/api/scanSitemap
 
-### [.chat](docs/sdks/chat/README.md)
+### [chat](docs/sdks/chat/README.md)
 
 * [createPublicChat](docs/sdks/chat/README.md#createpublicchat) - Create Public Chat
 * [deleteChat](docs/sdks/chat/README.md#deletechat) - Delete Chat
 * [sendMessageToPublicChat](docs/sdks/chat/README.md#sendmessagetopublicchat) - Send message to Public Chat
 
-### [.document](docs/sdks/document/README.md)
+### [document](docs/sdks/document/README.md)
 
 * [deleteDocument](docs/sdks/document/README.md#deletedocument) - Delete Document
 * [listDocuments](docs/sdks/document/README.md#listdocuments) - List Documents
 
-### [.ingest](docs/sdks/ingest/README.md)
+### [ingest](docs/sdks/ingest/README.md)
 
 * [ingestTextWithMetadata](docs/sdks/ingest/README.md#ingesttextwithmetadata) - Ingest Text with Metadata
 
-### [.partition](docs/sdks/partition/README.md)
+### [partition](docs/sdks/partition/README.md)
 
 * [createPartition](docs/sdks/partition/README.md#createpartition) - Create Partition
 * [searchPartitions](docs/sdks/partition/README.md#searchpartitions) - Search Partitions
 
-### [.query](docs/sdks/query/README.md)
+### [query](docs/sdks/query/README.md)
 
 * [askQuestionSetNumberOfContextDocs](docs/sdks/query/README.md#askquestionsetnumberofcontextdocs) - Ask Question set number of context docs
 <!-- End SDK Available Operations -->
@@ -92,9 +92,34 @@ Here's an example of one such pagination call:
 <!-- Start Error Handling -->
 # Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 
+## Example
+
+```typescript
+import { Doctrine } from "Doctrine";
+
+(async () => {
+    const sdk = new Doctrine();
+
+    let res;
+    try {
+        res = await sdk.httpLocalhost3000ApiScanpagecontent({
+            url: "https://sardelkitchen.com/products/chili-infused-olive-oil",
+        });
+    } catch (e) {}
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
 <!-- End Error Handling -->
 
 
@@ -177,8 +202,6 @@ const httpClient = axios.create({
 
 const sdk = new Doctrine({defaultClient: httpClient});
 ```
-
-
 <!-- End Custom HTTP Client -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->

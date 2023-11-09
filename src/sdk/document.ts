@@ -25,7 +25,8 @@ export class Document {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/api/document/cli3wy8jp000n33d1bsxvebns";
+        const operationUrl: string =
+            baseURL.replace(/\/$/, "") + "/api/document/cli3wy8jp000n33d1bsxvebns";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "*/*";
@@ -34,7 +35,7 @@ export class Document {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -71,7 +72,7 @@ export class Document {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/api/document";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/api/document";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "*/*";
@@ -80,7 +81,7 @@ export class Document {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",

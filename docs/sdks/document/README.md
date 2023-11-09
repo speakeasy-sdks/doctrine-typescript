@@ -1,5 +1,5 @@
 # Document
-(*.document*)
+(*document*)
 
 ### Available Operations
 
@@ -20,7 +20,6 @@ import { Doctrine } from "Doctrine";
 
   const res = await sdk.document.deleteDocument();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -36,8 +35,12 @@ import { Doctrine } from "Doctrine";
 
 ### Response
 
-**Promise<[operations.DeleteDocumentResponse](../../models/operations/deletedocumentresponse.md)>**
+**Promise<[operations.DeleteDocumentResponse](../../sdk/models/operations/deletedocumentresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## listDocuments
 
@@ -53,7 +56,6 @@ import { Doctrine } from "Doctrine";
 
   const res = await sdk.document.listDocuments();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -69,5 +71,9 @@ import { Doctrine } from "Doctrine";
 
 ### Response
 
-**Promise<[operations.ListDocumentsResponse](../../models/operations/listdocumentsresponse.md)>**
+**Promise<[operations.ListDocumentsResponse](../../sdk/models/operations/listdocumentsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

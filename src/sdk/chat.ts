@@ -32,7 +32,7 @@ export class Chat {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/api/chat";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/api/chat";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -51,7 +51,7 @@ export class Chat {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -89,7 +89,8 @@ export class Chat {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/api/chat/cli3yjw8j0000337jq4zbn1tq";
+        const operationUrl: string =
+            baseURL.replace(/\/$/, "") + "/api/chat/cli3yjw8j0000337jq4zbn1tq";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "*/*";
@@ -98,7 +99,7 @@ export class Chat {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -142,7 +143,7 @@ export class Chat {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string =
+        const operationUrl: string =
             baseURL.replace(/\/$/, "") + "/api/chat/cli3ymj8i0002337jh3dpysb2/public";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
@@ -162,7 +163,7 @@ export class Chat {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",

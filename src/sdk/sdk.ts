@@ -47,9 +47,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "2.0.0";
-    genVersion = "2.181.1";
-    userAgent = "speakeasy-sdk/typescript 2.0.0 2.181.1 1.0.0 Doctrine";
+    sdkVersion = "2.0.1";
+    genVersion = "2.185.0";
+    userAgent = "speakeasy-sdk/typescript 2.0.1 2.185.0 1.0.0 Doctrine";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -73,7 +73,7 @@ export class Doctrine {
             serverURL = ServerList[serverIdx];
         }
 
-        const defaultClient = props?.defaultClient ?? axios.create({ baseURL: serverURL });
+        const defaultClient = props?.defaultClient ?? axios.create();
         this.sdkConfiguration = new SDKConfiguration({
             defaultClient: defaultClient,
             serverURL: serverURL,
@@ -105,7 +105,7 @@ export class Doctrine {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/api/scanPageContent";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/api/scanPageContent";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -124,7 +124,7 @@ export class Doctrine {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -170,7 +170,7 @@ export class Doctrine {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/api/scanSitemap";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/api/scanSitemap";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -189,7 +189,7 @@ export class Doctrine {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",

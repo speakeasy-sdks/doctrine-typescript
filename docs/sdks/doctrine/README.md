@@ -24,7 +24,6 @@ import { Doctrine } from "Doctrine";
     url: "https://sardelkitchen.com/products/chili-infused-olive-oil",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -33,16 +32,20 @@ import { Doctrine } from "Doctrine";
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.HttpLocalhost3000ApiScanpagecontentRequestBody](../../models/operations/httplocalhost3000apiscanpagecontentrequestbody.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.HttpLocalhost3000ApiScanpagecontentRequestBody](../../sdk/models/operations/httplocalhost3000apiscanpagecontentrequestbody.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.HttpLocalhost3000ApiScanpagecontentResponse](../../models/operations/httplocalhost3000apiscanpagecontentresponse.md)>**
+**Promise<[operations.HttpLocalhost3000ApiScanpagecontentResponse](../../sdk/models/operations/httplocalhost3000apiscanpagecontentresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## httpLocalhost3000ApiScansitemap
 
@@ -60,7 +63,6 @@ import { Doctrine } from "Doctrine";
     rootDomain: "sardelkitchen.com",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -69,13 +71,17 @@ import { Doctrine } from "Doctrine";
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.HttpLocalhost3000ApiScansitemapRequestBody](../../models/operations/httplocalhost3000apiscansitemaprequestbody.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [operations.HttpLocalhost3000ApiScansitemapRequestBody](../../sdk/models/operations/httplocalhost3000apiscansitemaprequestbody.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.HttpLocalhost3000ApiScansitemapResponse](../../models/operations/httplocalhost3000apiscansitemapresponse.md)>**
+**Promise<[operations.HttpLocalhost3000ApiScansitemapResponse](../../sdk/models/operations/httplocalhost3000apiscansitemapresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

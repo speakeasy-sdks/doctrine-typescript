@@ -32,7 +32,7 @@ export class Ingest {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/api/ingest";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/api/ingest";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -51,7 +51,7 @@ export class Ingest {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",

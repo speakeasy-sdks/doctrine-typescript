@@ -1,5 +1,5 @@
 # Chat
-(*.chat*)
+(*chat*)
 
 ### Available Operations
 
@@ -25,7 +25,6 @@ import { Doctrine } from "Doctrine";
     public: true,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -34,16 +33,20 @@ import { Doctrine } from "Doctrine";
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.CreatePublicChatRequestBody](../../models/operations/createpublicchatrequestbody.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.CreatePublicChatRequestBody](../../sdk/models/operations/createpublicchatrequestbody.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
 
-**Promise<[operations.CreatePublicChatResponse](../../models/operations/createpublicchatresponse.md)>**
+**Promise<[operations.CreatePublicChatResponse](../../sdk/models/operations/createpublicchatresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteChat
 
@@ -58,7 +61,6 @@ import { Doctrine } from "Doctrine";
   const sdk = new Doctrine();
 
   const res = await sdk.chat.deleteChat();
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -75,8 +77,12 @@ import { Doctrine } from "Doctrine";
 
 ### Response
 
-**Promise<[operations.DeleteChatResponse](../../models/operations/deletechatresponse.md)>**
+**Promise<[operations.DeleteChatResponse](../../sdk/models/operations/deletechatresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## sendMessageToPublicChat
 
@@ -95,7 +101,6 @@ import { Doctrine } from "Doctrine";
     userId: "cookiecookie",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -104,13 +109,17 @@ import { Doctrine } from "Doctrine";
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.SendMessageToPublicChatRequestBody](../../models/operations/sendmessagetopublicchatrequestbody.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.SendMessageToPublicChatRequestBody](../../sdk/models/operations/sendmessagetopublicchatrequestbody.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
 ### Response
 
-**Promise<[operations.SendMessageToPublicChatResponse](../../models/operations/sendmessagetopublicchatresponse.md)>**
+**Promise<[operations.SendMessageToPublicChatResponse](../../sdk/models/operations/sendmessagetopublicchatresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

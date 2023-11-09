@@ -32,7 +32,7 @@ export class Partition {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/api/partition";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/api/partition";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -51,7 +51,7 @@ export class Partition {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -96,7 +96,7 @@ export class Partition {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/api/partition/search";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/api/partition/search";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         const headers: RawAxiosRequestHeaders = { ...config?.headers };
         const queryParams: string = utils.serializeQueryParams(req);
@@ -106,7 +106,7 @@ export class Partition {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
