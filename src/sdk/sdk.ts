@@ -47,9 +47,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "2.0.1";
-    genVersion = "2.185.0";
-    userAgent = "speakeasy-sdk/typescript 2.0.1 2.185.0 1.0.0 Doctrine";
+    sdkVersion = "2.0.2";
+    genVersion = "2.187.7";
+    userAgent = "speakeasy-sdk/typescript 2.0.2 2.187.7 1.0.0 Doctrine";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -132,7 +132,7 @@ export class Doctrine {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -141,7 +141,7 @@ export class Doctrine {
         const res: operations.HttpLocalhost3000ApiScanpagecontentResponse =
             new operations.HttpLocalhost3000ApiScanpagecontentResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {
@@ -197,7 +197,7 @@ export class Doctrine {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -206,7 +206,7 @@ export class Doctrine {
         const res: operations.HttpLocalhost3000ApiScansitemapResponse =
             new operations.HttpLocalhost3000ApiScansitemapResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {

@@ -59,7 +59,7 @@ export class Query {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -68,7 +68,7 @@ export class Query {
         const res: operations.AskQuestionSetNumberOfContextDocsResponse =
             new operations.AskQuestionSetNumberOfContextDocsResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {
