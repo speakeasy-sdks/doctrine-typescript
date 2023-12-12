@@ -36,7 +36,6 @@ src/sdk/models/operations/searchpartitions.ts
 src/sdk/models/operations/askquestionsetnumberofcontextdocs.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
-USAGE.md
 docs/sdk/models/operations/httplocalhost3000apiscanpagecontentrequestbody.md
 docs/sdk/models/operations/httplocalhost3000apiscanpagecontentresponse.md
 docs/sdk/models/operations/httplocalhost3000apiscansitemaprequestbody.md
@@ -63,4 +62,5 @@ docs/sdks/document/README.md
 docs/sdks/ingest/README.md
 docs/sdks/partition/README.md
 docs/sdks/query/README.md
+USAGE.md
 .gitattributes

@@ -16,7 +16,7 @@ Create Public Chat
 ```typescript
 import { Doctrine } from "Doctrine";
 
-(async() => {
+async function run() {
   const sdk = new Doctrine();
 
   const res = await sdk.chat.createPublicChat({
@@ -28,7 +28,9 @@ import { Doctrine } from "Doctrine";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -57,7 +59,7 @@ Delete Chat
 ```typescript
 import { Doctrine } from "Doctrine";
 
-(async() => {
+async function run() {
   const sdk = new Doctrine();
 
   const res = await sdk.chat.deleteChat();
@@ -65,7 +67,9 @@ import { Doctrine } from "Doctrine";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -93,7 +97,7 @@ Send message to Public Chat
 ```typescript
 import { Doctrine } from "Doctrine";
 
-(async() => {
+async function run() {
   const sdk = new Doctrine();
 
   const res = await sdk.chat.sendMessageToPublicChat({
@@ -104,7 +108,9 @@ import { Doctrine } from "Doctrine";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

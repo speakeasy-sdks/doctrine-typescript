@@ -17,7 +17,7 @@ http://localhost:3000/api/scanPageContent
 ```typescript
 import { Doctrine } from "Doctrine";
 
-(async() => {
+async function run() {
   const sdk = new Doctrine();
 
   const res = await sdk.httpLocalhost3000ApiScanpagecontent({
@@ -27,7 +27,9 @@ import { Doctrine } from "Doctrine";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -56,7 +58,7 @@ http://localhost:3000/api/scanSitemap
 ```typescript
 import { Doctrine } from "Doctrine";
 
-(async() => {
+async function run() {
   const sdk = new Doctrine();
 
   const res = await sdk.httpLocalhost3000ApiScansitemap({
@@ -66,7 +68,9 @@ import { Doctrine } from "Doctrine";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

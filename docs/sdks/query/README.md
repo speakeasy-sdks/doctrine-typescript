@@ -14,7 +14,7 @@ Ask Question set number of context docs
 ```typescript
 import { Doctrine } from "Doctrine";
 
-(async() => {
+async function run() {
   const sdk = new Doctrine();
 
   const res = await sdk.query.askQuestionSetNumberOfContextDocs({
@@ -25,7 +25,9 @@ import { Doctrine } from "Doctrine";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

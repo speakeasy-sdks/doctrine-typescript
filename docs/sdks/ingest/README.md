@@ -14,7 +14,7 @@ Ingest Text with Metadata
 ```typescript
 import { Doctrine } from "Doctrine";
 
-(async() => {
+async function run() {
   const sdk = new Doctrine();
 
   const res = await sdk.ingest.ingestTextWithMetadata({
@@ -30,7 +30,9 @@ import { Doctrine } from "Doctrine";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

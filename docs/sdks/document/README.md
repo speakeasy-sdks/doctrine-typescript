@@ -15,7 +15,7 @@ Delete Document
 ```typescript
 import { Doctrine } from "Doctrine";
 
-(async() => {
+async function run() {
   const sdk = new Doctrine();
 
   const res = await sdk.document.deleteDocument();
@@ -23,7 +23,9 @@ import { Doctrine } from "Doctrine";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -51,7 +53,7 @@ List Documents
 ```typescript
 import { Doctrine } from "Doctrine";
 
-(async() => {
+async function run() {
   const sdk = new Doctrine();
 
   const res = await sdk.document.listDocuments();
@@ -59,7 +61,9 @@ import { Doctrine } from "Doctrine";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

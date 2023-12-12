@@ -1,8 +1,8 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { Doctrine } from "Doctrine";
 
-(async () => {
+async function run() {
     const sdk = new Doctrine();
 
     const res = await sdk.httpLocalhost3000ApiScanpagecontent({
@@ -12,7 +12,9 @@ import { Doctrine } from "Doctrine";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
