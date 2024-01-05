@@ -1,21 +1,10 @@
-configVersion: 1.0.0
-management:
-  docChecksum: dfe0da54cbc7e1669cb10d2a74cf83c2
-  docVersion: 1.0.0
-  speakeasyVersion: 1.127.0
-  generationVersion: 2.220.0
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: Doctrine
-  repoURL: https://github.com/speakeasy-sdks/doctrine-typescript.git
   usageSnippets:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
-features:
-  typescript:
-    core: 3.3.9
-    globalServerURLs: 2.82.1
 typescript:
   version: 2.1.1
   author: Doctrine
@@ -30,9 +19,7 @@ typescript:
       shared: sdk/models/shared
       webhooks: sdk/models/webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/speakeasy-sdks/doctrine-typescript
   maxMethodParams: 0
   outputModelSuffix: output
   packageName: Doctrine
-  repoSubDirectory: .
   templateVersion: v1
